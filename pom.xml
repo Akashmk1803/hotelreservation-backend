@@ -51,12 +51,19 @@
 	<build>
 		<plugins>
 			<plugin>
+				<!-- Compiler plugin for Java 17 -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.11.0</version>
 				<configuration>
 					<release>17</release>
 				</configuration>
+			</plugin>
+
+			<!-- Spring Boot plugin to create executable fat JAR -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
