@@ -1,5 +1,5 @@
-# Use Java 21 base image
-FROM eclipse-temurin:21-jdk
+# Use Java 17 base image
+FROM eclipse-temurin:17-jdk
 
 # Set working directory inside container
 WORKDIR /app
@@ -17,4 +17,4 @@ RUN ./mvnw clean package -DskipTests
 EXPOSE 8080
 
 # Run the JAR
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["sh", "-c", "java -jar target/*.jar"]
